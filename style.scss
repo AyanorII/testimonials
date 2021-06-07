@@ -1,0 +1,112 @@
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+}
+
+.white-text {
+    h2, .user > .name {
+        color: white;
+    } 
+}
+
+p {
+    color: hsl(0, 0%, 81%)
+}
+
+.testimonial:nth-child(1) {
+    grid-area: daniel;
+    background-color: #733FC8;
+    color: white;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat:  no-repeat;
+    background-position: top right 1.5rem;
+
+    img {
+        border: 2px solid #A775F1;
+    }
+}
+.testimonial:nth-child(2) {
+    grid-area: jonathan;
+    background-color: #48556A;
+    color: white;
+}
+
+.testimonial:nth-child(3) {
+    grid-area: jeanette;
+    
+}
+
+.testimonial:nth-child(4) {
+    background-color: #19202D;
+    color: white;
+    grid-area: patrick;
+
+    img {
+        border: 2px solid #A775F1;
+    }
+}
+
+.testimonial:nth-child(5) {
+    grid-area: kira;
+}
+
+.testimonial {
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 1.5rem;
+    background-color: white;
+
+    h2 {
+        font-size: 1.25rem;
+        line-height: 24px;
+    }
+    p {
+        line-height: 18px;
+    }
+}
+
+.user p {
+    margin: 0;
+    font-size: 0.6875rem;
+}
+
+.profile {
+    display: flex;
+    color: #48556A;
+    font-weight: 600;
+
+    img {
+        border-radius: 50%;
+        width: 1.75rem;
+        height: 1.75rem;
+        margin-right: 1.0625rem;
+        object-fit: cover;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: #ECF2F8;
+    }
+    .testimonial {
+        margin: 0;
+    }
+
+    .testimonial:nth-child(1) {
+        background-position: top right 5rem;
+    }
+
+    .grid-container {
+        display: grid;
+        gap: 1.875rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "daniel daniel jonathan kira"
+                            "jeanette patrick patrick kira";
+        padding: 9.5% 15%;
+    }
+
+}
+
